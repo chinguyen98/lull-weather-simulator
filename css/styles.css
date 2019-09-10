@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url('https://images4.alphacoders.com/704/thumb-1920-704.jpg');
+    background-attachment: fixed;
+}
+
 html{
     font-size: 16px;
 }
