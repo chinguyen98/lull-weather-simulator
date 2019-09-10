@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+h1.bigbrand{
+    font-size: 6rem;
+}
+
+.activeEff{
+    cursor: pointer;
+}
+
+.brand{
+    color: white;
+    text-decoration: none;
+}
+
+.brand:hover{
+    color: yellow;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.logo{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+}
+
+.logo img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.nav__Intro{
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nav__Intro:hover{
+    font-size: 105%;
+    text-decoration: none;
+    color: aquamarine;
+}
+
+.onTopContainer{
+    background-color: #616C6F;
+}
+
+.playBtnContainer{
+    text-align: center;
+}
+
+.soundIcon{
+    width: 8rem;
+    height: 8rem;
+}
+
+.weatherVolumeRange{
+    opacity: 0;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: blue;
+    outline: none;
+    opacity: 0.5;
+    transition: opacity .2s;
+}
+
+.weatherVolumeRange::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: aqua;
+    cursor: pointer;
+}
+
+.whetherShowerContainer{
+    opacity: 0.2;
+}
+
+.whetherShowerContainer *{
+    cursor: pointer;
+}
+
+.weatherVolumeRangeContainer{
+    opacity: 0;
+}

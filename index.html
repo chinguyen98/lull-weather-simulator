@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Lull - Weather simulator</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/b0106ee4d5.js"></script>
+	<link rel="stylesheet" href="./css/styles.css">
+	<script defer src="./js/main.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="container-fluid position-fixed fixed-top">
+			<div class="row onTopContainer">
+				<div
+					class="col col-md-4 d-flex align-items-center justify-content-center justify-content-lg-start py-2">
+					<div class="logo" class="mx-3 mx-lg-4">
+						<a href="#"><img src="./img/logo.png"></a>
+					</div>
+					<div class="mx-3 mx-lg-4">
+						<a href="#" class="brand"><h1 class="h1">LULL</h1></a>
+					</div>
+				</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<nav class="navbar d-flex justify-content-lg-end justify-content-around">
+						<ul class="nav ">
+							<li class="nav-item p-3">
+								<a href="#" class="nav__Intro">Introduction</a>
+							</li>
+							<li class="nav-item p-3">
+								<a href="#" class="nav__Intro">About</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="pt-md-5 pt-5">
+		<article class="pt-5">
+			<div class="container-fluid pt-5">
+				<div class="row">
+					<div class="col pt-md-3">
+						<h1 class="text-center h1 bigbrand">LULL</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<p class="text-center">Take you to the different world</p>
+					</div>
+				</div>
+				<div class="row align-items-center pt-md-3">
+					<div class="col playBtnContainer ">
+						<i title="Random" class="fas fa-random fa-4x activeEff randomBtn"></i>
+					</div>
+					<div class="col playBtnContainer">
+						<i title="Play/Pause" class="fas fa-play fa-8x activeEff playBtn"></i>
+					</div>
+					<div class="col playBtnContainer">
+						<i title="Stop and reset all sound." class="far fa-stop-circle fa-4x activeEff stopBtn"></i>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="pt-md-5 pl-md-2 pt-2">
+			<div class="container-fluid pt-3">
+				<div class="row d-flex align-items-center justify-content-around">
+					<div class="col-lg-2 col-6">
+						<div data-audio="rain" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/rain.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Rain</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="rain" class="weatherVolumeRange" type="range" name="weatherVolumeRange"
+								min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="thunder" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/thunder.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Thunder</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="thunder" class="weatherVolumeRange" type="range"
+								name="weatherVolumeRange" min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="windy" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/wind.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Windy</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="windy" class="weatherVolumeRange" type="range" name="weatherVolumeRange"
+								min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="forest" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/forest.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Forest</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="forest" class="weatherVolumeRange" type="range" name="weatherVolumeRange"
+								min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="leaves" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/leaves.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Leaves</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="leaves" class="weatherVolumeRange" type="range" name="weatherVolumeRange"
+								min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="stream" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/stream.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Stream</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="stream" class="weatherVolumeRange" type="range" name="weatherVolumeRange"
+								min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+				</div>
+				<div class="row d-flex align-items-center justify-content-around pt-md-5">
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="seaside" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/seaside.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Seaside</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="seaside" class="weatherVolumeRange" type="range"
+								name="weatherVolumeRange" min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="water" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/water.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Water</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="water" class="weatherVolumeRange" type="range" name="weatherVolumeRange"
+								min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="flame" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/flame.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Flame</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="flame" class="weatherVolumeRange" type="range" name="weatherVolumeRange"
+								min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="summerNight" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/summer-night.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Summer Night</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="summerNight" class="weatherVolumeRange" type="range"
+								name="weatherVolumeRange" min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="quietNight" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/quiet-night.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Quiet Night</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="quietNight" class="weatherVolumeRange" type="range"
+								name="weatherVolumeRange" min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="coffeeShop" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/coffee.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Coffee Shop</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="coffeeShop" class="weatherVolumeRange" type="range"
+								name="weatherVolumeRange" min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+				</div>
+				<div class="row d-flex align-items-center justify-content-around pt-md-5">
+					<div class="col-lg-2 col-6">
+						<div data-audio="wave" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/wave.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Wave</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="wave" class="weatherVolumeRange" type="range" name="weatherVolumeRange"
+								min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="rainOnRoof" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/rain-on-roof.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Rain of roof</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="rainOnRoof" class="weatherVolumeRange" type="range"
+								name="weatherVolumeRange" min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="rainOnFloor" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/rain-on-floor.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Rain on floor</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="rainOnFloor" class="weatherVolumeRange" type="range"
+								name="weatherVolumeRange" min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="waterfall" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/waterfall.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Waterfall</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="waterfall" class="weatherVolumeRange" type="range"
+								name="weatherVolumeRange" min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="windChimes" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/wind-chimes.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Wind chimes</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="windChimes" class="weatherVolumeRange" type="range"
+								name="weatherVolumeRange" min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+					<div class="col-lg-2 col-6  ">
+						<div data-audio="singingBowl" class="whetherShowerContainer">
+							<img class="soundIcon pb-md-4 d-block mx-auto" src="./img/singing-bowl.png" alt="rain" />
+							<h3 class="h3 text-center pb-md-3">Singing bowl</h3>
+						</div>
+						<div class="weatherVolumeRangeContainer">
+							<input data-audio="singingBowl" class="weatherVolumeRange" type="range"
+								name="weatherVolumeRange" min="0" max="1" step="0.01" value="0.5">
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	
+
+	<div class="pt-4">
+		<audio data-audio="rain" controls>
+			<source src="https://www.soundjay.com/nature/sounds/rain-02.mp3" type="audio/mp3"></audio>
+		<audio data-audio="thunder" controls>
+			<source src="https://rainymood.com/audio1110/0.m4a" type="audio/mp3"></audio>
+		<audio data-audio="windy" controls>
+			<source
+				src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-the-sound-pack-tree/tspt_abstract_wind_background_loop_100.mp3?_=2"
+				type="audio/mp3"></audio>
+		<audio data-audio="forest" controls>
+			<source
+				src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-free-to-use-sounds/ftus_jungle_rainforest_daytime_birds_singing_close_up_distant_traffic_vietnam_705.mp3?_=1"
+				type="audio/mp3"></audio>
+		<audio data-audio="leaves" controls>
+			<source src="https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/dry-leaves-falling_fyt2dHVO.mp3"
+				type="audio/mp3"></audio>
+		<audio data-audio="stream" controls>
+			<source src="https://www.soundjay.com/nature/sounds/stream-3.mp3" type="audio/mp3"></audio>
+
+		<audio data-audio="seaside" controls>
+			<source
+				src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-35448/zapsplat_nature_ocean_waves_small_calm_gentle_lap_onto_sand_beach_tropical_island_001_35571.mp3?_=3"
+				type="audio/mp3"></audio>
+		<audio data-audio="water" controls>
+			<source src="https://www.soundjay.com/nature/sounds/river-6.mp3" type="audio/mp3"></audio>
+		<audio data-audio="flame" controls>
+			<source src="https://www.soundjay.com/nature/sounds/fire-2.mp3" type="audio/mp3"></audio>
+		<audio data-audio="summerNight" controls>
+			<source src="https://st3.asoftmurmur.com/assets/p/content/crickets/main-crickets.mp4" type="audio/mp3">
+		</audio>
+		<audio data-audio="coffeeShop" controls>
+			<source src="https://st3.asoftmurmur.com/assets/p/content/people/main-people.mp4" type="audio/mp3"></audio>
+		<audio data-audio="quietNight" controls>
+			<source
+				src="https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/jg-032316-sfx-cicadas-on-a-quiet-night.mp3"
+				type="audio/mp3"></audio>
+
+		<audio data-audio="wave" controls>
+			<source src="https://st3.asoftmurmur.com/assets/p/content/waves/main-waves.mp4" type="audio/mp3"></audio>
+		<audio data-audio="rainOnRoof" controls>
+			<source src="https://www.freesoundslibrary.com/wp-content/uploads/2017/11/rain-on-tin-roof.mp3"
+				type="audio/mp3"></audio>
+		<audio data-audio="rainOnFloor" controls>
+			<source src="https://www.soundjay.com/nature/sounds/rain-06.mp3" type="audio/mp3"></audio>
+		<audio data-audio="waterfall" controls>
+			<source src="https://www.soundjay.com/nature/sounds/waterfall-1.mp3" type="audio/mp3"></audio>
+		<audio data-audio="windChimes" controls>
+			<source src="https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/wind-chime-ding-long_fJKNksEu.mp3"
+				type="audio/mp3"></audio>
+		<audio data-audio="singingBowl" controls>
+			<source src="https://st1.asoftmurmur.com/assets/p/content/sbowl/main-sbowl.mp4" type="audio/mp3"></audio>
+
+	</div>
+	<script>
+
+	</script>
+</body>
+
+</html>
