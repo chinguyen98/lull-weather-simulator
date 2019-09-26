@@ -4,7 +4,7 @@ Weather simulator website for focusing your mind.
 
 ## Website
 
-Link: https://chinguyenedu.000webhostapp.com/
+Link: https://chinguyen98.github.io/lull-weather-simulator/
 
 Demo:
 
